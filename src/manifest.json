@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "UVIndex",
+    "version": "1.0",
+    "author": "Bryan Smith",
+    "description": "Shows the current UV levels for select Australian cities.",
+    "icons": {
+        "48": "icon48.png",
+        "96": "icon96.png"
+    },
+    "content_security_policy": "script-src 'self' https://*.jquery.com https://*.bootstrapcdn.com https://*.cloudflare.com; object-src 'self'",
+    "permissions" : [
+        "storage"
+    ],
+    "options_ui": {
+        "page": "settings/options.html"
+    },
+    "browser_action": {
+        "default_icon": "icon32.png",
+        "default_title": "UVIndex",
+        "default_popup": "index.html"
+    },
+    "applications": {
+        "gecko": {
+            "id": "bryan@bryanabsmith.com"
+        }
+    }
+}
