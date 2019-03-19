@@ -1,0 +1,123 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<!-- Load Bootstrap's CSS. -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		crossorigin="anonymous">
+	<style>
+		/* Set the margin for the extension and its max width. */
+		body {
+			margin: 3%;
+			max-width: 350px;
+			min-width: 350px;
+		}
+
+		/* 
+			Hide the "Show/Hide" button outline border when it's clicked.
+			Thanks to https://stackoverflow.com/a/23337989
+		*/
+		.btn:focus,
+		.btn:active {
+			outline: none !important;
+			box-shadow: none;
+		}
+	</style>
+	<!-- Load jQuery, Popper and Bootstrap JS files. -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		crossorigin="anonymous"></script>
+	<!-- Load the content JS file. -->
+	<script src="content.js"></script>
+</head>
+
+<body>
+	<div id='loadingSpinner'>
+		<div class="d-flex align-items-center">
+			<strong id='loadingTitle'>Loading...</strong>
+			<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+		</div>
+	</div>
+	<div class="alert alert-danger" role="alert" id='noCity'></div>
+	<div>
+		<h4 id='uvTitle'></h4>
+	</div>
+
+
+	<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+		<div class="card-header lead" id='uvTitleCard'>UV Index</div>
+		<div class="card-body">
+			<h5 class="card-title display-3" id='uvLarge'></h5>
+			<p class="card-text lead" id='uvDate'></p>
+		</div>
+	</div>
+
+	<p></p>
+	<a class="btn btn-outline-secondary btn-block" data-toggle="collapse" href="#aboutCollapse" role="button"
+		aria-expanded="false" aria-controls="collapseExample">
+		<span class='lead'>Show/Hide More</span>
+	</a>
+	<span class="collapse" id="aboutCollapse">
+		<p></p>
+		<h6 class='display-4' style='font-size: 32px;'>Info</h6>
+		<span class='lead'>According to the Bureau of Meteorology, "sun protection measures are recommended when the UV
+			Index is 3 and
+			above" (<a href='http://www.bom.gov.au/uv/'>source</a>).</span>
+		<p></p>
+		<h6 class='display-4' style='font-size: 32px;'>Legend</h6>
+		<table class='table'>
+			<thead class='thead-dark'>
+				<tr>
+					<th class='lead' scope='col'>UV Index</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class='lead' style='background-color: #4eb400'>Less than 2.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #a0ce00'>2 - 3.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #f7e400'>3 - 4.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #f8b600'>4 - 5.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #f88700'>5 - 6.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #f85900'>6 - 7.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #e82c0e'>7 - 8.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #d8001d'>8 - 9.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #ff0099'>9 - 10.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #b54cff'>10 - 11.</td>
+				</tr>
+				<tr>
+					<td class='lead' style='background-color: #998cff'>11+.</td>
+				</tr>
+			</tbody>
+		</table>
+		<span class='lead'>For more information, see <a
+				href='https://www.arpansa.gov.au/sites/default/files/uviguide.pdf'>here</a>.</span>
+		<p></p>
+		<h6 class='display-4' style='font-size: 32px;'>Data</h6>
+		<span class='lead'>UV observations courtesy of ARPANSA. See <a
+				href="https://www.arpansa.gov.au/our-services/monitoring/ultraviolet-radiation-monitoring/ultraviolet-radation-data-information#Disclaimer">here</a>
+			for a disclaimer.</span>
+	</span>
+</body>
+
+</html>
