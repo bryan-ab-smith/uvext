@@ -1,2 +1,2 @@
 cd src/
-zip -r -FS ../uvindex_dist.zip *
+zip -r -FS ../uvext_dist.zip *
