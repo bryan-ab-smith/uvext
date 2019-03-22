@@ -10,7 +10,7 @@ function onGot(item) {
         $('#noCity').html('It seems like you haven\'t set a city yet.<br \\>To do so, head over to the preferences to set one.');
         // Hide the UV table (as it has no data yet).
         $('#uvTable').hide();
-    // Otherwise, a city has been set.
+        // Otherwise, a city has been set.
     } else {
         // Hide the no city dialog.
         $('#noCity').hide();
@@ -21,17 +21,17 @@ function onGot(item) {
             type: 'GET',
             url: 'https://uvdata.arpansa.gov.au/xml/uvvalues.xml',
             dataType: 'xml',
-            error: function(xhr) {
+            error: function (xhr) {
                 // Hide the loading spinner and set the UV to nothing.
                 $('#loadingSpinner').hide();
                 $('#uvLarge').html('--');
             },
-            success: function(xml) {
+            success: function (xml) {
                 // Hide the loding spinner.
                 $('#loadingSpinner').hide();
 
                 // Loop over the locations.
-                $(xml).find('location').each(function() {
+                $(xml).find('location').each(function () {
                     // If the id is the city set by the user
                     if ($(this).attr('id') == item.city) {
                         // Parse the index as a float.

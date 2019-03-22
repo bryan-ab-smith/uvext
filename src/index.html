@@ -34,6 +34,7 @@
 </head>
 
 <body>
+	<!-- This is the spinner that presents itself until the UV data is loaded.-->
 	<div id='loadingSpinner'>
 		<div class="d-flex align-items-center">
 			<strong id='loadingTitle'>Loading...</strong>
@@ -41,11 +42,11 @@
 		</div>
 	</div>
 	<div class="alert alert-danger" role="alert" id='noCity'></div>
-	<div>
+	<!--<div>
 		<h4 id='uvTitle'></h4>
-	</div>
+	</div>-->
 
-
+	<!-- This is the main card with the city name, uv data and update date. -->
 	<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 		<div class="card-header lead" id='uvTitleCard'>UV Index</div>
 		<div class="card-body">
@@ -55,17 +56,21 @@
 	</div>
 
 	<p></p>
+	<!-- The shod/hide button that shows/hides more info. -->
 	<a class="btn btn-outline-secondary btn-block" data-toggle="collapse" href="#aboutCollapse" role="button"
 		aria-expanded="false" aria-controls="collapseExample">
 		<span class='lead'>Show/Hide More</span>
 	</a>
+	<!-- The extended info. -->
 	<span class="collapse" id="aboutCollapse">
 		<p></p>
+		<!-- Info from the BOM. -->
 		<h6 class='display-4' style='font-size: 32px;'>Info</h6>
 		<span class='lead'>According to the Bureau of Meteorology, "sun protection measures are recommended when the UV
 			Index is 3 and
 			above" (<a href='http://www.bom.gov.au/uv/'>source</a>).</span>
 		<p></p>
+		<!-- Legend from the WHO at the meaning of the UV index. -->
 		<h6 class='display-4' style='font-size: 32px;'>Legend</h6>
 		<table class='table'>
 			<thead class='thead-dark'>
@@ -75,43 +80,44 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class='lead' style='background-color: #4eb400'>Less than 2.</td>
+					<td class='lead' style='background-color: #4eb400'>Less than 2.<br />Low</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #a0ce00'>2 - 3.</td>
+					<td class='lead' style='background-color: #a0ce00'>2 - 3.<br />Low</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #f7e400'>3 - 4.</td>
+					<td class='lead' style='background-color: #f7e400'>3 - 4.<br />Moderate</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #f8b600'>4 - 5.</td>
+					<td class='lead' style='background-color: #f8b600'>4 - 5.<br />Moderate</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #f88700'>5 - 6.</td>
+					<td class='lead' style='background-color: #f88700'>5 - 6.<br />Moderate</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #f85900'>6 - 7.</td>
+					<td class='lead' style='background-color: #f85900'>6 - 7.<br />High</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #e82c0e'>7 - 8.</td>
+					<td class='lead' style='background-color: #e82c0e'>7 - 8.<br />High</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #d8001d'>8 - 9.</td>
+					<td class='lead' style='background-color: #d8001d'>8 - 9.<br />Very High</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #ff0099'>9 - 10.</td>
+					<td class='lead' style='background-color: #ff0099'>9 - 10.<br />Very High</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #b54cff'>10 - 11.</td>
+					<td class='lead' style='background-color: #b54cff'>10 - 11.<br />Very High</td>
 				</tr>
 				<tr>
-					<td class='lead' style='background-color: #998cff'>11+.</td>
+					<td class='lead' style='background-color: #998cff'>11+.<br />Extreme</td>
 				</tr>
 			</tbody>
 		</table>
 		<span class='lead'>For more information, see <a
 				href='https://www.arpansa.gov.au/sites/default/files/uviguide.pdf'>here</a>.</span>
 		<p></p>
+		<!-- Credit for the UV data. -->
 		<h6 class='display-4' style='font-size: 32px;'>Data</h6>
 		<span class='lead'>UV observations courtesy of ARPANSA. See <a
 				href="https://www.arpansa.gov.au/our-services/monitoring/ultraviolet-radiation-monitoring/ultraviolet-radation-data-information#Disclaimer">here</a>
