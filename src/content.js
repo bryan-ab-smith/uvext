@@ -78,6 +78,9 @@ function onGot(item) {
                         $('#uvDate').html('As of ' + $(this).find('date').text() + ', ' + $(this).find('time').text());
                         // Set the name of the city on the UV index card.
                         $('#uvTitleCard').html('UV Index for ' + $(this).attr('id'));
+                        /*browser.browserAction.setBadgeText({
+                            text: $(this).find('index').text()
+                        });*/
                     }
                 });
             }

@@ -12,10 +12,11 @@ function saveOptions(e) {
 		browser.storage.sync.set({
 			city: citySelect.value
 		});
+		alert("City set to " + citySelect.value);
 		// If the "select a city" option is present, remove it (it's no longer needed).
 		// https://stackoverflow.com/a/12933067
-		if (firstVal.options[0].value == "nocity") {
-			firstVal.remove(0);
+		if (citySelect.options[0].value == "nocity") {
+			citySelect.remove(0);
 		}
 	}
 }
