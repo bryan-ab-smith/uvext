@@ -41,13 +41,15 @@
 			<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
 		</div>
 	</div>
-	<div class="alert alert-danger" role="alert" id='noCity'></div>
+	<div class="alert alert-danger" role="alert" id='noCity'>
+		It seems like you haven't set a city yet.<br \\>To do so, head over to the preferences to set one.
+	</div>
 	<!--<div>
 		<h4 id='uvTitle'></h4>
 	</div>-->
 
 	<!-- This is the main card with the city name, uv data and update date. -->
-	<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+	<div id="uvIndexCard" class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 		<div class="card-header lead" id='uvTitleCard'>UV Index</div>
 		<div class="card-body">
 			<h5 class="card-title display-3" id='uvLarge'></h5>

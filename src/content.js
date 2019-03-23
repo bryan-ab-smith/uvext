@@ -6,8 +6,9 @@ function onGot(item) {
     if (item.city == undefined) {
         // Hide the loading spinner.
         $('#loadingSpinner').hide();
+        $('#uvIndexCard').hide()
         // Tell the user that they should set the city.
-        $('#noCity').html('It seems like you haven\'t set a city yet.<br \\>To do so, head over to the preferences to set one.');
+        $('#noCity').show();
         // Hide the UV table (as it has no data yet).
         $('#uvTable').hide();
         // Otherwise, a city has been set.
@@ -15,6 +16,7 @@ function onGot(item) {
         // Hide the no city dialog.
         $('#noCity').hide();
         $('#loadingSpinner').show();
+        $('#uvIndexCard').show()
         // Set up and execute the AJAX request.
         // Thanks to http://www.jquerybyexample.net/2012/04/read-and-process-xml-using-jquery-ajax.html
         $.ajax({
