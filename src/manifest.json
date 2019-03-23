@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "UVIndex",
+    "name": "UVExt",
     "version": "1.0",
     "author": "Bryan Smith",
     "description": "Shows the current UV levels for select Australian cities.",

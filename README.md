@@ -11,6 +11,10 @@ The package.sh script should do all you need.
 ### Browser
 Initial versions are designed for Firefox. However, minor changes are all that should be required to have this work in Chrome.
 
+| Browser       | Version           | 
+|:------------- |-------------:|
+| Firefox      | 57+ |
+
 ### City
 | State/Territory        | City           | 
 |:------------- |-------------:|
